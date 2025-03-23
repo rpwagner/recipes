@@ -18,11 +18,11 @@
 	  {% endfor %}
       ],
       "recipeInstructions": [
-	  {% for step in page.instructions %}	  
+	  {% for instruction in page.instructions %}	  
           {
               "@type": "HowToStep",
-              "name": "{{- step.step.name -}}",
-              "text": "{{- step.description -}}"
+              "name": "{{- instruction.step.name -}}",
+              "text": "{{- instruction.step.description -}}"
           }{% unless forloop.last %},{% endunless -%}
 	  {% endfor %}
       ]
