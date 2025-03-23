@@ -1,5 +1,5 @@
 ---
-title: Pancakes
+name: Pancakes
 ---
 
 A pancake recipe.

@@ -3,45 +3,27 @@
   {
       "@context": "https://schema.org/",
       "@type": "Recipe",
-      "name": "Non-Alcoholic Pina Colada",
+      "name": "{{- recipe.name -}}",
       "author": {
           "@type": "Person",
-          "name": "Mary Stone"
+          "name": "{{- recipe.author -}}"
       },
       "datePublished": "2024-03-10",
-      "description": "This non-alcoholic pina colada is everyone's favorite!",
-      "recipeCuisine": "American",
-      "prepTime": "PT1M",
-      "cookTime": "PT2M",
-      "totalTime": "PT3M",
-      "keywords": "non-alcoholic",
-      "recipeYield": "4 servings",
-      "recipeCategory": "Drink",
-      "nutrition": {
-          "@type": "NutritionInformation",
-          "calories": "120 calories"
-      },
+      "description": "{{- recipe.description -}}",
+      "recipeYield": "{{- recipe.servings --}} servings",
+      "recipeCategory": "{{- recipe.category -}}",
       "recipeIngredient": [
-          "400ml of pineapple juice",
-          "100ml cream of coconut",
-          "ice"
+	  {% for ingredient in recipe.ingredients %}
+          "{{- ingredient -}}"{% unless forloop.last %},{% endunless -%}
+	  {% endfor %}
       ],
       "recipeInstructions": [
+	  {% for step in recipe.instructions %}	  
           {
               "@type": "HowToStep",
-              "name": "Blend",
-              "text": "Blend 400ml of pineapple juice and 100ml cream of coconut until smooth."
-          },
-          {
-              "@type": "HowToStep",
-              "name": "Fill",
-              "text": "Fill a glass with ice."
-          },
-          {
-              "@type": "HowToStep",
-              "name": "Pour",
-              "text": "Pour the pineapple juice and coconut mixture over ice."
-          }
+              "name": "{{- step.name -}}",
+              "text": "{{- step.description -}}"
+          }{% unless forloop.last %},{% endunless -%}
       ]
   }
 </script>
