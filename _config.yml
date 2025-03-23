@@ -5,7 +5,7 @@ show_downloads: false
 collections:
   recipes:
     output: true
-    permalink: /:collection/:name
+    permalink: /recipes/:name
 
 defaults:
   - scope:
