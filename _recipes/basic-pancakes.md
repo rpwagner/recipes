@@ -1,5 +1,5 @@
 ---
-name: Pancakes
+name: Basic Pancakes
 author: Mary Stone
 description: "Basic pancakes"
 servings: 8
