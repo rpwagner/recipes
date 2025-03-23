@@ -1,6 +1,7 @@
 theme: minima
 title: Recipes
 description: Recipe site with Schema.org descriptions
+baseurl: /recipes
 show_downloads: false
 collections:
   recipes:
