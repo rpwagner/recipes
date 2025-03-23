@@ -4,9 +4,9 @@ layout: default
 
 <h1>Recipe: {{- page.name -}}</h1>
 
-{{- page.description -}}
+<p>{{- page.description -}}</p>
 
-Servings: {{- page.servings --}}
+<p><b>Servings:</b> {{ page.servings }}</p>
 
 <h2>Ingredients</h2>
 
@@ -20,7 +20,7 @@ Servings: {{- page.servings --}}
 
 <ol>
   {% for instruction in page.instructions %}	  
-  <li>{{- instruction.step.name -}}: {{- instruction.step.description -}}</li>
+  <li><b>{{- instruction.step.name -}}:</b> {{ instruction.step.description }}</li>
   {% endfor %}
 </ol>
 
