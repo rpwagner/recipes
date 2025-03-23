@@ -1,4 +1,4 @@
-theme: jekyll-theme-minima
+theme: minima
 title: Recipes
 description: Recipe site with Schema.org descriptions
 show_downloads: false
