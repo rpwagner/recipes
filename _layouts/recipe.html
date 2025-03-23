@@ -5,3 +5,15 @@ layout: default
 <h2>This is a Recipe</h2>
 
 {{ content }}
+
+<h2>Page</h2>
+{{ page | markdownify }}
+
+<h2>Recipe</h2>
+{{ recipe | markdownify }}
+
+<h2>Site</h2>
+{{ site | markdownify }}
+
+<h2>Layout</h2>
+{{ layout | markdownify }}
