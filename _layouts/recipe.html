@@ -2,18 +2,28 @@
 layout: default
 ---
 
-<h2>This is a Recipe</h2>
+<h1>Recipe: {{- page.name -}}</h1>
+
+{{- page.description -}}
+
+Servings: {{- page.servings --}}
+
+<h2>Ingredients</h2>
+
+<ul>
+  {% for ingredient in page.ingredients %}
+  <li>{{- ingredient -}}</li>
+  {% endor %}
+</ul>
+
+<h2>Instructions</h2>
+
+<ol>
+  {% for instruction in page.instructions %}	  
+  <li>{{- instruction.step.name -}}: {{- instruction.step.description -}}</li>
+  {% endfor %}
+</ol>
+
+<h2>Notes</h2>
 
 {{ content }}
-
-<h2>Page</h2>
-{{ page | markdownify }}
-
-<h2>Recipe</h2>
-{{ recipe | markdownify }}
-
-<h2>Site</h2>
-{{ site | markdownify }}
-
-<h2>Layout</h2>
-{{ layout | markdownify }}
