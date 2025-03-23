@@ -1,9 +1,17 @@
 {% if page.collection == 'recipes' %}
+<title>{{- page.name -}}</title>
+
 <script type="application/ld+json">
   {
       "@context": "https://schema.org/",
       "@type": "Recipe",
       "name": "{{- page.name -}}",
+      {% if page.date %}
+      "datePublished": "{{- page.date | date: "%Y-%m-%d %H:%M:%S" -}}",
+      {% endif %}
+      {% if page.updated %}
+      "dateModified": "{{- page.updated | date: "%Y-%m-%d %H:%M:%S" -}}",
+      {% endif %}
       "author": {
           "@type": "Person",
           "name": "{{- page.author -}}"

@@ -1,6 +1,8 @@
 ---
 name: Pancakes
 author: Mary Stone
+date: "2025-03-21 14:00:00"
+updated: "2025-03-22 19:00:00"
 description: "Basic pancakes"
 servings: 8
 category: Breakfast
