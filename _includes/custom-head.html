@@ -21,7 +21,7 @@
 	  {% for step in page.instructions %}	  
           {
               "@type": "HowToStep",
-              "name": "{{- step.name -}}",
+              "name": "{{- step.step.name -}}",
               "text": "{{- step.description -}}"
           }{% unless forloop.last %},{% endunless -%}
 	  {% endfor %}
