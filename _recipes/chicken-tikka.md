@@ -1,3 +1,7 @@
+---
+name: Chicken Tikka Masala
+---
+
 # Chicken Tikka Masala
 
 Category: Dinner, Meal Prep
